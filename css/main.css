@@ -190,10 +190,14 @@ iframe {
         font-size: 1em;
     }
     .sobre_mi_contenedor {
+        padding: 1.5em 2.5em;
+        margin: auto;
+        justify-self: center;
         width: 70vw;
     }
     .tarjeta_presentacion {
         width: 60vw;
-        /*justify-self: center;*/
+        padding: 1.5em 2.5em;
+        margin-bottom: 2.5em;
     }
 }
