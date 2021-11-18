@@ -189,4 +189,11 @@ iframe {
     .tarjeta_presentacion_contenido p {
         font-size: 1em;
     }
+    .sobre_mi_contenedor {
+        width: 70vw;
+    }
+    .tarjeta_presentacion {
+        width: 60vw;
+        /*justify-self: center;*/
+    }
 }

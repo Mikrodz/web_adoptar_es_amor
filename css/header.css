@@ -45,6 +45,8 @@ header nav {
 }
 .nav_menu {
     position: fixed;
+    width: 100vw;
+    height: 100vh;
 }
 .lista_nav_menu a {
     display: block;
@@ -66,7 +68,7 @@ header nav {
 .etiqueta_nav_activador {
     position: fixed;
     top: 2.5%;
-    right: 5%;
+    right: 7%;
     height: 10%;
     display: flex;
     flex: 1;
