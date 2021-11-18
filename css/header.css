@@ -1,0 +1,136 @@
+.header_contenedor {
+    display: flex;
+    justify-content: space-between;
+    background: url("../images/banner_cachorritos_desatendidos.jpeg") no-repeat center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+    color: var(--color_primario); 
+    text-shadow: -1.5px 1.5px 1px var(--sombra_primaria);
+    padding: 3em;
+}
+
+/*banner*/
+
+h1 {
+    font-size: 6vw;
+}
+.texto_banner {
+    font-size: 4vw;
+}
+.titulo_contenedor {
+    align-self: center;
+}
+
+/*barra de navegación*/
+
+header nav {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    background: var(--fondo_nav_bar_menu);
+    opacity: 0.8;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 600ms ease-in-out;
+}
+.nav_menu {
+    position: fixed;
+}
+.lista_nav_menu a {
+    display: block;
+    color: var(--color_primario);
+    text-shadow: 1px 1px 1px var(--sombra_primaria);
+    font-size: 1.5em;
+    padding: 1em;
+    opacity: 0; 
+    width: 100%;
+    transition: opacity 10ms ease-in-out;
+}
+.lista_nav_menu a:hover {
+    color: var(--color_secundario);
+    text-shadow: 1px 1px 1px var(--sombra_secundaria);
+}
+.nav_activador {
+    display: none;
+}
+.etiqueta_nav_activador {
+    position: fixed;
+    top: 2.5%;
+    right: 5%;
+    height: 10%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    z-index: 2;
+}
+.etiqueta_nav_activador span,
+.etiqueta_nav_activador span::before,
+.etiqueta_nav_activador span::after {
+    display: block;
+    background: linear-gradient(to right bottom, #ff81c1, #f7a6e1, #e8d8fb, #d6aef0, #d087df, #cd5ac8, #cc00ab);;
+    height: 4px;
+    width: 1.5em;
+    border-radius: 4px;
+    position: relative;
+}
+.etiqueta_nav_activador span::before,
+.etiqueta_nav_activador span::after {
+    content: '';
+    position: absolute;
+}
+.etiqueta_nav_activador span::before {
+    bottom: 7px;
+}
+.etiqueta_nav_activador span::after {
+    top: 7px;
+}
+.nav_activador:checked ~ nav {
+    transform: scale(1,1);
+}
+.nav_activador:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+/*media query nav_menu*/
+
+@media screen and (min-width: 750px) {
+    .etiqueta_nav_activador {
+        display: none;
+    }
+    .nav_menu {
+        all: unset;
+    }
+    .nav_menu ul {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(1fr, max-content));
+        grid-template-rows: 1fr;
+        grid-template-areas: ". . inicio beneficios video sobre_mi";
+        text-align: center;
+    }
+    .nav_links1 {grid-area: inicio;}
+    .nav_links2 {grid-area: beneficios;}
+    .nav_links3 {grid-area: video;}
+    .nav_links4 {grid-area: sobre_mi;}
+    .lista_nav_menu a {
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 550px) {
+    .titulo_contenedor h1 {
+        font-size: 2em;
+    }
+    .texto_banner {
+        font-size: 1.3em;
+    }
+}

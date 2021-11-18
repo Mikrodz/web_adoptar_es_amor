@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url(header.css);
+@import url(main.css);
+@import url(footer.css);
+* {
+    font-family: 'Jost', sans-serif;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+:root {
+    --color_primario: #ff81c1;
+    --color_secundario: #00c2ce;
+    --sombra_primaria: #800040;
+    --sombra_secundaria: #00494d;
+    --columnas_tarjetas: 1fr 1fr 1fr;
+    --fondo_nav_bar_menu: linear-gradient(to bottom, #f0c7f5, #f2e5fe);
+}
+body, html {
+    margin: 0;
+}
+.contenedor_general {
+    display: grid;
+    height: 100%;
+    width: auto;
+    grid-template-columns: repeat(12, minmax(1fr, max-content));
+    grid-template-rows: repeat(5, minmax(1fr, max-content));
+    grid-template-areas: 
+    'header header header header header header header header header header header header'
+    'main main main main main main main main main main main main'
+    'video video video video video video video video video video video video'
+    'presentacion presentacion presentacion presentacion presentacion presentacion presentacion presentacion presentacion presentacion presentacion presentacion'
+    'footer footer footer footer footer footer footer footer footer footer footer footer'
+    ;
+}
+.header_contenedor {
+    grid-area: header;
+}
+.main_contenedor {
+    grid-area: main;
+}
+.video_contenedor {
+    grid-area: video;
+}
+.tarjeta_presentacion {
+    grid-area: presentacion;
+}
+.footer_contenedor {
+    grid-area: footer;
+}
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}

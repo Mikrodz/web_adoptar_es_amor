@@ -1,0 +1,192 @@
+h2 {
+    padding: 2.5em;
+    font-size: 1.7em;
+}
+h2, h3, h4 {
+    color: var(--color_primario);
+    text-shadow: 1.5px 1.5px 1px var(--sombra_primaria);
+}
+
+.main_contenedor {
+    background: linear-gradient(to right top, #00c2ce, #75cfeb, #b4dcf9, #e3ebfd, #ffffff);
+    width: 100%;
+}
+
+/*tarjetas_giratorias*/
+
+.tarjetas_grupo {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 2.5em;
+}
+#tarjetas_beneficios {
+    padding-left: 10%;
+    justify-self: flex-start;
+    width: 100%;
+}
+.tarjeta_giratoria {
+    background-color: transparent;
+    width: 360px;
+    height: 260px;
+    perspective: 1000px;
+    border-radius: 2%;
+}
+.tarjeta_giratoria_interior {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s ease-in-out;
+    transform-style: preserve-3d;
+    border-radius: 2%;
+}
+.tarjeta_giratoria:hover .tarjeta_giratoria_interior {
+    transform: rotateY(180deg);
+}
+.tarjeta_giratoria_frente, .tarjeta_giratoria_reverso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    z-index: 1;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 2%;
+}
+.tarjeta_giratoria_frente {
+    background-color: #fff;
+}
+.tarjeta_giratoria_reverso {
+    background-color: #fff;
+    color: var(--color_primario);
+    font-size: 1.5em;
+    text-align: center;
+    transform: rotateY(180deg);
+    padding: 1em;
+}
+.tarjeta_imagen {
+    border-radius: 2%;
+}
+.texto_tarjetas {
+    text-align: center;
+    text-justify: auto;
+}
+
+/*video*/
+
+.video_contenedor {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-items: center;
+    align-items: center;
+    padding: 2.5em;
+}
+iframe {
+    border-radius: 1.5%;
+    height: 1fr;
+    width: 100%;
+}
+#video {
+   padding-left: 25%;
+   justify-self: flex-start;
+   width: 100%;
+}
+
+/*sobre_mi*/
+
+.sobre_mi_contenedor {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 2.5em;
+    align-items: center;
+    justify-items: center;
+    border-radius: 2%;
+    margin-bottom: 5em;
+}
+.tarjeta_presentacion {
+    padding: 2.5em;
+    background: linear-gradient(to left bottom, #b4dcf9, #e3ebfd, #ffffff);
+    transition: 0.5s;
+    width: 38vw;
+    height: auto;
+    border-radius: 2%;
+}
+.tarjeta_presentacion_imagen {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    justify-self: center;
+}
+.tarjeta_presentacion:hover {
+    box-shadow: 1px 2px 3px var(--sombra_secundaria);
+}
+.tarjeta_presentacion_contenido {
+    text-align: center;
+}
+.tarjeta_presentacion_contenido h3 {
+    font-size: 1.4em; 
+}
+.tarjeta_presentacion_contenido p {
+    font-size: 1.3em;
+    color: #003039;
+}
+
+/*media query tarjetas_giratorias*/
+
+@media screen and (max-width: 550px) {
+    .tarjeta_giratoria {
+        height: 520px;
+        width: 360px;
+        perspective: unset;
+    }
+    .tarjeta_giratoria_interior {
+        transition: unset;
+        transform-style: unset;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 0.8em;
+    }
+    .tarjeta_giratoria:hover .tarjeta_giratoria_interior {
+        transform: unset;
+    }
+    .tarjeta_giratoria_frente {
+        background: transparent;
+    }
+    .tarjeta_giratoria_frente, .tarjeta_giratoria_reverso {
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        backface-visibility: unset;
+        position: relative;
+        height: 50%;
+    }
+    .tarjeta_giratoria_reverso {
+        color: var(--color_primario);
+        font-size: 1.5em;
+        transform: unset;
+        padding: 1em;
+        height: 260px;
+        order: -1;
+    }
+    .tarjeta_imagen {
+        border-radius: 2%;
+    }
+    .texto_tarjetas {
+        position: relative;
+    }
+}
+
+/*media query sobre_mi*/
+
+@media screen and (max-width: 500px) {
+    .tarjeta_presentacion_contenido p {
+        font-size: 1em;
+    }
+}
