@@ -199,5 +199,6 @@ iframe {
         width: 60vw;
         padding: 1.5em 2.5em;
         margin-bottom: 2.5em;
+        justify-self: center;
     }
 }
