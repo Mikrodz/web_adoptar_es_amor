@@ -141,47 +141,47 @@ iframe {
 
 /*media query tarjetas_giratorias*/
 
-@media screen and (max-width: 550px) {
-    .tarjeta_giratoria {
-        height: 520px;
-        width: 360px;
-        perspective: unset;
-    }
-    .tarjeta_giratoria_interior {
-        transition: unset;
-        transform-style: unset;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-gap: 0.8em;
-    }
-    .tarjeta_giratoria:hover .tarjeta_giratoria_interior {
-        transform: unset;
-    }
-    .tarjeta_giratoria_frente {
-        background: transparent;
-    }
-    .tarjeta_giratoria_frente, .tarjeta_giratoria_reverso {
-        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        backface-visibility: unset;
-        position: relative;
-        height: 50%;
-    }
-    .tarjeta_giratoria_reverso {
-        color: var(--color_primario);
-        font-size: 1.5em;
-        transform: unset;
-        padding: 1em;
-        height: 260px;
-        order: -1;
-    }
-    .tarjeta_imagen {
-        border-radius: 2%;
-    }
-    .texto_tarjetas {
-        position: relative;
-    }
-}
+/*@media screen and (max-width: 500px) {*/
+    /*.tarjeta_giratoria {*/
+        /*height: 520px;*/
+        /*width: 360px;*/
+        /*perspective: unset;*/
+    /*}*/
+    /*.tarjeta_giratoria_interior {*/
+        /*transition: unset;*/
+        /*transform-style: unset;*/
+        /*grid-gap: 0.8em;*/
+        /*display: flex;*/
+        /*flex-flow: column;*/
+    /*}*/
+    /*.tarjeta_giratoria:hover .tarjeta_giratoria_interior {*/
+        /*transform: unset;*/
+    /*}*/
+    /*.tarjeta_giratoria_frente {*/
+        /*background: transparent;*/
+        /*order: 2;*/
+    /*}*/
+    /*.tarjeta_giratoria_frente, .tarjeta_giratoria_reverso {*/
+        /*box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);*/
+        /*backface-visibility: unset;*/
+        /*position: relative;*/
+        /*height: 50%;*/
+    /*}*/
+    /*.tarjeta_giratoria_reverso {*/
+        /*color: var(--color_primario);*/
+        /*font-size: 1.5em;*/
+        /*transform: unset;*/
+        /*padding: 1em;*/
+        /*height: 260px;*/
+        /*order: 1;*/
+    /*}*/
+    /*.tarjeta_imagen {*/
+        /*border-radius: 2%;*/
+    /*}*/
+    /*.texto_tarjetas {*/
+        /*position: relative;*/
+    /*}*/
+/*}*/
 
 /*media query sobre_mi*/
 
